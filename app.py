@@ -1,22 +1,8 @@
 import streamlit as st
-import pickle
+import time
 
-c=0
-a = st.button("Click me")
-d=st.empty()
-if a:
-    try:
-        with open('a',"rb") as f:
-            c=pickle.load(f)
-        d.text(str(c))
+st.header("You have successfully wasted your time. Get back to your work.")
 
-        c+=1
-        with open('a',"wb") as f:
-            pickle.dump(c,f)
-    except:
-        d.text(str(c))
-        c+=1
-        with open('a',"wb") as f:
-            pickle.dump(c,f)
+time.sleep(3)
 
-    
+st.balloons()
